@@ -39,6 +39,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'School',
       style: optionStyle,
     ),
+    Text(
+      'Photo',
+      style: optionStyle,
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -52,7 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rescue Me'),
-        backgroundColor: Colors.amber[800],
+        backgroundColor: Colors.black,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -71,9 +75,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Icon(Icons.school),
             title: Text('School'),
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_a_photo),
+            title: Text('Photo'),
+          ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
+        unselectedItemColor: Colors.amberAccent,
         onTap: _onItemTapped,
       ),
     );
