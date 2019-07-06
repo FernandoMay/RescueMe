@@ -32,15 +32,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
     Text(
-      'Business',
+      'User',
       style: optionStyle,
     ),
     Text(
-      'School',
+      'Map',
       style: optionStyle,
     ),
     Text(
-      'Photo',
+      'Coordination',
       style: optionStyle,
     ),
   ];
@@ -56,7 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rescue Me'),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -68,16 +68,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             title: Text('Home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            title: Text('Business'),
+            icon: Icon(Icons.person),
+            title: Text('User'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            title: Text('School'),
+            icon: Icon(Icons.map),
+            title: Text('Map'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_a_photo),
-            title: Text('Photo'),
+            icon: Icon(Icons.group),
+            title: Text('Coord'),
           ),
         ],
         currentIndex: _selectedIndex,
